@@ -1,0 +1,29 @@
+<aura:component controller="ContactComponentController" >
+    
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <div class="slds-m-around_x-small">
+        <div class="slds-m-top_small">
+            <ul class="slds-has-dividers_bottom-space">
+                <aura:iteration items="{!v.mydata}" var="object">
+                    <li class="slds-item">
+                        <lightning:tile label="{!object.Name}"
+                                        href="{!'https://nick-duhovich-dev-ed.lightning.force.com/lightning/r/Contact/' + object.Id + '/view'}">
+                            <aura:set attribute="media">
+                                <lightning:avatar src="/docs/component-library/app/images/examples/avatar1.jpg"
+                                                  fallbackIconName="standard:person_account"
+                                                  alternativeText="{!object.Name}"/>
+                            </aura:set>
+                            <ul class="slds-list_horizontal slds-has-dividers_right">
+                                <li class="slds-item">{!object.Phone}</li>
+                                <li class="slds-item">{!object.Email}</li>
+                            </ul>
+                        </lightning:tile>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </div>
+    
+</aura:component>
