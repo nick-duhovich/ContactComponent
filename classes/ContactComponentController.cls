@@ -12,7 +12,7 @@ public with sharing class ContactComponentController {
         String expression = checkString(filterValue);
         Integer limitRecords = maxRecordsLimit+1;
         System.debug(limitRecords);
-        List<Contact> contacts = [SELECT Id, Name, Phone, MobilePhone, Email
+        List<Contact> contacts = [SELECT ID, Name, FirstName, LastName, Phone, MobilePhone, Email, Account.Name
                                   FROM Contact
                                   WHERE Name LIKE :expression
                                   OR Phone LIKE :expression

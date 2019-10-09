@@ -1,6 +1,5 @@
 ({
     init: function(component, event, helper) {
-        helper.setColumns(component);
         helper.getData(component);
     },
     

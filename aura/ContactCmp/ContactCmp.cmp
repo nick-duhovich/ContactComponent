@@ -1,9 +1,8 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ContactComponentController" access="global">
     
-    <aura:attribute name="mydata" type="Object"/>
-    <aura:attribute name="mycolumns" type="List"/>
-    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="mydata" type="List"/>
     <aura:attribute name="maxRecordsLimit" type="Integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
 
 	<!-- EventForSearch -->
     <aura:attribute name="searchString" type="String"/>
@@ -12,8 +11,9 @@
     
     <lightning:card title="Contacts" iconName="standard:contact">
         <c:SearchForCmp/>
-        <c:DataTableCmp mydata="{!v.mydata}" mycolumns="{!v.mycolumns}"/>
-        <!--<c:DataTableCmp mydata="{!v.mydata}" />-->
+        <c:DataTableCmp mydata="{!v.mydata}"/>
     </lightning:card>
+    
+    <!--<c:InfoPopup/>-->
 
 </aura:component>

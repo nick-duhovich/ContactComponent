@@ -1,10 +1,10 @@
 ({
     getData : function(component) {
         var searchString = component.get("v.searchString");
-        console.log("Filter_in_SEARCH HELPER " + searchString);
+        //console.log("SearchString in getData: " + searchString);
         
         var action = component.get('c.getContacts');
-        console.log("ACTION " + action);
+        //console.log("ACTION: " + action);
         
         action.setParams({filterValue : searchString, maxRecordsLimit : component.get('v.maxRecordsLimit')});
         
@@ -18,13 +18,5 @@
             }
         }));
         $A.enqueueAction(action);
-    },
-    
-    setColumns : function(component) {
-        component.set('v.mycolumns', [
-            {label: 'Contact Name', fieldName: 'Name', type: 'text'},
-            {label: 'Phone', fieldName: 'Phone', type: 'phone'},
-            {label: 'Email', fieldName: 'Email', type: 'email'}
-        ]);
     }
 })

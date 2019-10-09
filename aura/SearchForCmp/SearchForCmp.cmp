@@ -1,4 +1,5 @@
 <aura:component >
+    
     <aura:registerEvent name="stringCmpEvent" type="c:EventForSearch" />
     <aura:attribute name="searchString" type="String"/>
     
