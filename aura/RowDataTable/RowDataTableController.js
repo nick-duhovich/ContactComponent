@@ -17,7 +17,6 @@
         ],
                             function(components, status) {
                                 if (status === "SUCCESS") {
-                                    console.log("Send to popupBody");
                                     modalBody = components[0];
                                     modalFooter = components[1];
                                     component.find('overlayLib').showCustomModal({
@@ -26,16 +25,7 @@
                                         footer: modalFooter,
                                         showCloseButton: true,
                                         cssClass: "my-modal,my-custom-class,my-other-class"
-                                    })/*.then(function (overlay) {
-                                        //overlay.close();
-                                        
-                                        //component.set("v.overlayLib", overlay);
-                                        //console.log("SET overlayLib::: " + component.get('v.overlayLib'));
-                                        
-                                        //setTimeout(function() {
-                                        //    overlay.close();
-                                        //}, 3000);
-                                    })*/;
+                                    });
                                 }
                             }
                            );

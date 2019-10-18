@@ -1,9 +1,6 @@
 <aura:component >
     <aura:attribute name="contact" type="Object" />
     
-    <!--<lightning:icon size="medium" iconName="action:approval" alternativeText="Approved" />
-    Your application has been approved.-->
-    
     <div class="slds-form__row">
         <div class="slds-form__item" role="listitem">
             <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
